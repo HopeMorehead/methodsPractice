@@ -16,10 +16,12 @@ namespace methodsPractice
             //Methods are ALWAYS part of a class. Methods are always children classes.
             //This means a method will never be inside another method or member of the class.
             FavoriteFood("orange", "pizza");
-
-
-
             RetirementCalculator(35);
+            double hoursWorked = 42.3d;
+            double hourlyWage = 12.50d;
+
+          Console.WriteLine(" Your monthly wage is {0}.",  WageCalculator(hoursWorked, hourlyWage));
+            //retirementage(intUserAge) if there is a return
 
 
 
@@ -51,8 +53,6 @@ namespace methodsPractice
 
         public static void FavoriteFood(string Name, string food)
         {
-
-
             Console.WriteLine("I like {0} and {1}", Name, food + "I also like {0} and {1}",Name,food);
         }
 
@@ -75,10 +75,16 @@ namespace methodsPractice
             int retirement = 65 - userAge;
             Console.WriteLine($"The user will {retirement} years");
 
-
         }
         
-        
+        public static double WageCalculator(double hoursWorkedWeekly, double hourlyWage)
+        {
+
+            //This method should calculate the Monthly wage
+            double monthlyWage =( hoursWorkedWeekly * 52* hourlyWage)/12;
+            return monthlyWage;
+
+        }
          
     }
 }
